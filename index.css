@@ -1,0 +1,145 @@
+/* Estilo global para o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  background-image: url('./img/capital.jpg'); /* Imagem de fundo */
+  background-size: cover; /* Ajuste responsivo para a imagem */
+  background-position: center; /* Centraliza a imagem no fundo */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal que centraliza o conteúdo */
+#container {
+  width: 90%; /* Largura ajustável para responsividade */
+  max-width: 800px; /* Largura máxima */
+  margin: 30px auto; /* Centraliza horizontalmente */
+  background-color: #fff; /* Fundo branco */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 6.5em; /* tamanho da logo */
+  max-width: 250px; /* Define um tamanho máximo para evitar distorções */
+}
+
+/* Estilo do título principal */
+h1 {
+  text-align: center;
+  color: #547e4d; /* Verde agro */
+}
+
+/* Estilo para cada seção do formulário */
+form section {
+  margin-bottom: 15px; /* Espaçamento inferior */
+  padding-right: 25px;
+}
+
+/* Estilo para os rótulos */
+label {
+  display: block;
+  font-weight: bold; /* Negrito para destaque */
+  margin-bottom: 5px; /* Espaçamento inferior */
+}
+
+/* Estilo para os campos de entrada */
+input {
+  width: 100%; /* Preenche a largura do container */
+  padding: 10px; /* Espaçamento interno */
+  font-size: 14px;
+  border: 1px solid #ccc; /* Borda leve */
+  border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Exibição dos dias calculados */
+#resultado-dias {
+  font-size: 14px;
+  color: #547e4d; /* Verde agro */
+  margin-top: 5px; /* Espaçamento superior */
+}
+
+/* Estilo para os botões */
+button {
+  padding: 10px 20px; /* Espaçamento interno */
+  background-color: #547e4d; /* Cor de fundo verde agro */
+  color: #fff; /* Texto branco */
+  border: none;
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Indicador de botão clicável */
+  transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+#buttons-container {
+  display: flex;          /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza os botões na horizontal */
+  gap: 10px;               /* Espaço entre os botões */
+  margin-top: 40px;        /* Espaço superior */
+}
+
+button:hover {
+  background-color: #45663e; /* Cor mais escura ao passar o mouse */
+}
+
+/* Tabela de resultados */
+#resultado-tabela {
+  width: 100%; /* Largura total */
+  border-collapse: collapse; /* Remove espaços entre células */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+#resultado-tabela th,
+#resultado-tabela td {
+  border: 1px solid #ccc; /* Borda leve */
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Centraliza texto */
+}
+
+#resultado-tabela th {
+  background-color: #547e4d; /* Fundo verde */
+  color: #fff; /* Texto branco */
+}
+
+#tabela-corpo p,
+#total-com-juros {
+  margin-top: 20px;
+  text-align: right; /* Alinha à direita */
+  font-weight: bold;
+  color: #333; /* Texto cinza escuro */
+}
+
+/* Estilos específicos para impressão */
+@media print {
+  body {
+    background: none; /* Remove o fundo para evitar gasto de tinta */
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .logo {
+    max-width: 200px; /* Ajuste para manter a logo visível na impressão */
+  }
+
+  button, 
+  .button-container {
+    display: none; /* Oculta botões na impressão */
+  }
+
+  #resultado {
+    page-break-before: avoid; /* Evita que o resultado seja quebrado */
+  }
+
+  @page {
+    size: A4; /* Define o tamanho da folha como A4 */
+    margin: 10mm; /* Reduz a margem para otimizar espaço */
+  }
+}

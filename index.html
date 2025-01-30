@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Parcelas</title>
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Container principal para centralizar o conteúdo -->
+  <div id="container">
+    <!-- Logo acima do título -->
+    <img src="img/logo.png" alt="Logo da empresa" class="logo">
+    <!-- Título principal -->
+    <h1>Calculadora de Parcelas</h1>
+    <!-- Formulário para entrada de dados -->
+    <form id="form">
+      <section>
+        <!-- Campo para o nome do cliente -->
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente" placeholder="Digite o nome do cliente" required>
+      </section>
+      <section>
+        <!-- Campo para o número do pedido -->
+        <label for="numeroPedido">Número do Pedido:</label>
+        <input type="text" id="numeroPedido" placeholder="Digite o número do pedido" required>
+      </section>
+      <section>
+        <!-- Campo para o valor da venda -->
+        <label for="valor">Valor da Venda:</label>
+        <input type="number" id="valor" placeholder="Digite o valor da venda" required>
+      </section>
+      <section>
+        <!-- Campo para a taxa de juros -->
+        <label for="juros">Taxa de Juros (%):</label>
+        <input type="number" id="juros" placeholder="Digite a taxa de juros (%)" required>
+      </section>
+      <section>
+        <!-- Campo para a data de emissão -->
+        <label for="dataEmissao">Data de Emissão:</label>
+        <input type="date" id="dataEmissao" required>
+      </section>
+      <section>
+        <!-- Campo para a data final -->
+        <label for="dataFinal">Data Final:</label>
+        <input type="date" id="dataFinal" required>
+        <!-- Exibição do número de dias calculados -->
+        <p id="resultado-dias"></p>
+      </section>
+      <section>
+        <!-- Campo para o número de parcelas -->
+        <label for="parcelas">Número de Parcelas:</label>
+        <input type="number" id="parcelas" placeholder="Digite a quantidade de parcelas" required>
+      </section>
+      <!-- Botões de ações -->
+      <div id="buttons-container">
+        <button type="button" id="calcular">Calcular</button>
+        <button type="button" id="imprimir">Imprimir</button>
+      </div>
+    </form>
+    <!-- Exibição do resultado das parcelas -->
+    <div id="resultado"></div>
+  </div>
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
